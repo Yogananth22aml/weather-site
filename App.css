@@ -1,0 +1,213 @@
+body.day {
+  background: url('https://img.freepik.com/free-photo/landscape-sky-dusk-beauty-beach_1203-6292.jpg?ga=GA1.1.404821633.1724318394&semt=ais_hybrid') no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+}
+
+body.night {
+  background: url('https://img.freepik.com/premium-vector/scenery-starry-night-with-pine-forest-background_105940-526.jpg?ga=GA1.1.404821633.1724318394&semt=ais_hybrid') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+/* body{
+  background: linear-gradient(to right, #6c5ce7, #00cec9);
+  
+} */
+.app {
+  display: flex;
+}
+
+.nav-toggle {
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.nav-toggle.open {
+  transform: rotate(45deg);
+  left: 10px;
+}
+
+.side-navbar.open .nav-toggle.open {
+  left: 150px;
+}
+.side-navbar {
+  color: rgb(255, 255, 255);
+  width: 200px;
+  height: 100vh;
+  background-color: #111;
+  position: fixed;
+  left: -139px;
+  top: 0;
+  transition: left 0.3s; 
+  
+}
+
+.side-navbar.open {
+  left: 0;
+
+  align-items: center;
+}
+
+.nav-content {
+  display: flex;
+  padding: 20px;
+  margin-top: 70px;
+  flex-direction: column;
+  align-items: end; /* Center icons */
+}
+.nav-text{
+  margin-left: 10px;
+  display: none;
+}
+.side-navbar.open .nav-text {
+  display: inline; /* Show text when sidebar is expanded */
+  flex-direction: column;
+  align-items: center;
+}
+.nav-item {
+  
+  display: flex;
+  align-items: center; /* Center icon and text */
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 18px; /* Icon size */
+  text-decoration: none;
+}
+.nav-item:hover{ 
+  /* justify-content: center;
+  width: 30px;
+  border-radius: 15px;
+  height: 30px; */
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transform: translate(5px , 5px);
+  transition: transform 0.5s ;
+}
+.side-navbar.open .nav-item:hover {
+  border-radius: none;
+  width: 140px;
+  justify-content: center;
+  height: 30px;
+  background-color: #ffffff;
+  color: black;
+
+}
+
+.app-name {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 60px; /* Adjust depending on the side-navbar width */
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.nav-open .main-content {
+  margin-left: 250px;
+}
+
+/* Dropdown styles */
+.state-dropdown, .district-dropdown, .city-dropdown {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 15px;
+  text-align: start;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.state-dropdown {
+  background-color: #f9f9f9;
+}
+
+.district-dropdown {
+  background-color: #e9ecef;
+}
+
+.city-dropdown {
+  background-color: #d3d3d3;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 300px;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.close-btn {
+  background-color: red;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.sunny-background {
+  background-image: url('https://img.freepik.com/free-photo/green-field-with-sunny-day_1160-940.jpg');
+  background-size: cover;
+  color: black;
+  background-position: center;
+
+}
+
+.cloudy-background {
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/021/714/788/small_2x/clouds-on-sky-video.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+.rainy-background {
+  background-image: url('https://www.shutterstock.com/image-photo/color-umbrella-sky-mixed-media-260nw-570905572.jpg');
+  width: 350px;
+  background-position: center;
+
+}
+.thunderstorm-background{
+  background-image: url('https://t3.ftcdn.net/jpg/05/64/04/18/360_F_564041870_iGZq5SD8qI9SU6VkXzH0xL91IsC71iHH.jpg');
+  background-size: cover;
+  color: black;
+  background-position: center;
+
+}
+.get-weather-btn {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#mapbox-weather {
+  height: 600px;
+  width: 100%;
+}
